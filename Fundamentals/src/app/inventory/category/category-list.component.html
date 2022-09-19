@@ -1,0 +1,45 @@
+ 
+<div class="card">
+    <div class="card-header bg-info"> {{title}}</div>
+    <div class="card-body">
+
+      <form method="get">
+       <button type="submit" formaction="category-form" class="add-btn btn btn-primary">
+        <i class="fa fa-plus"></i> Add Category</button>
+  </form>
+  <table class="table" id="category-list">
+    <thead>
+    <tr>
+      <th>Category Id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+    </thead>
+
+    <tbody> 
+        <ng-container *ngIf="data.length === 0 ">
+            <tr>
+                <td colspan="4">
+                    No Data Available
+                </td>
+            </tr>
+            </ng-container>
+        <ng-container *ngIf="data.length > 0">
+            <ng-container *ngFor="let row of data">
+                <tr >
+                    <td>{{row.categoryId}}</td>
+                    <td>{{row.categoryName}}</td>
+                    <td>{{row.description}}</td>
+                    <td>
+                        <a href="category-form.html?categoryId=1"> <i class="fa fa-pencil text-info"></i></a>&nbsp;&nbsp;
+                        <a href="category-delete?categoryId=1"> <i class="fa fa-trash text-danger"></i></a>
+                    </td> 
+                </tr>
+        </ng-container>
+    </ng-container>
+       
+                  </tbody>
+  </table>
+    </div>
+  </div>

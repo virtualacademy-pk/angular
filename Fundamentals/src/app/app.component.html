@@ -1,8 +1,7 @@
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+<nav class="navbar navbar-expand-lg navbar-light bg-info">
     <div class="container-fluid">
        
-        <a class="navbar-brand">Inventory Management</a>
+        <a href="index.html" class="navbar-brand">Inventory Management</a>
 
       
     </div>
@@ -25,9 +24,26 @@
   
       </div>
       <div class="col-10">
-      
-           
-      <category-list></category-list>
+        <!--
+        <input [(ngModel)]="title">
+        <button (click)="action('show')">Show</button>
+        <button (click)="action('hide')">Hide</button>
+        <ng-container *ngIf="show">
+         <my-grid [columns]="column" [data]="data"></my-grid>
+      </ng-container>
+    -->
+    <!--
+    <my-grid [columns]="column" [data]="data" title="Categories"></my-grid>
+    <my-grid [columns]="stdCol" [data]="stdData" title="Students"></my-grid>
+    <my-grid [columns]="['User Name', 'User Loccation', 'User Role']"   title="Users"></my-grid>
+    -->
+    <category-list title="Categories"></category-list>
+    <!--
+      Service
+      let i: Abc = new new Abc
+      Dependency Injecion
+      Singlton 
+    -->
       </div>
     </div>
   </div>

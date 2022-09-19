@@ -1,0 +1,45 @@
+ 
+<div class="card">
+    <div class="card-header bg-info"> {{title}}</div>
+    <div class="card-body">
+
+       
+  <table class="table" >
+    <thead>
+        <tr>
+        <ng-container *ngFor="let col of columns">
+                <th>{{col}}</th>
+             
+        </ng-container>
+        <th></th>
+    </tr>
+   
+    </thead>
+
+    <tbody> 
+        <ng-container *ngIf="data.length === 0 ">
+            <tr>
+                <td [attr.colspan]="columns.length + 1">
+                    No Data Available
+                </td>
+            </tr>
+            </ng-container>
+        <ng-container *ngIf="data.length > 0">
+            <ng-container *ngFor="let row of data">
+                <tr >
+                    <ng-container *ngFor="let col of columns">
+                     <td>{{row[col]}}</td>
+                    </ng-container>
+                    
+                    <td>
+                        <a  > <i class="fa fa-pencil text-info"></i></a>&nbsp;&nbsp;
+                        <a > <i class="fa fa-trash text-danger"></i></a>
+                    </td> 
+                </tr>
+        </ng-container>
+    </ng-container>
+       
+                  </tbody>
+  </table>
+    </div>
+  </div>

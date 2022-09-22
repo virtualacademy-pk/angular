@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import {CategoryListComponent} from './products/category-list/category-list.component';
 import { AppComponent } from './app.component';
+import { MyGridomponent } from './grid/my-grid.component';
+import { CategoryListComponent } from './inventory/category/category-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    MyGridomponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
